@@ -16,7 +16,7 @@ public class MirrorTest {
             ,"'Todos','abXYXba','abXYXba'","'Todos','abXYYXba','abXYYXba'"
     })
     public void mirrorTest(String partition, String data, String expected){
-        Mirror m = new Mirror();
+        Mirror m = new Mirror() ;
         String actual = m.mirrorEnds(data);
         Assertions.assertEquals(expected, actual);
     }

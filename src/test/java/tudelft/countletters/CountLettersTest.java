@@ -7,7 +7,7 @@ public class CountLettersTest {
 
     @Test
     public void multipleMatchingWords() {
-        int words = new CountLetters().count("cats|dogs");
+        int words = new CountLetters().count("car|dogs");
         Assertions.assertEquals(2, words);
     }
 
@@ -17,4 +17,9 @@ public class CountLettersTest {
         Assertions.assertEquals(1, words);
     }
 
+    @Test
+    public void firstWordDoesNotMatch1(){
+        int words = new CountLetters().count("cat|dor");
+        Assertions.assertEquals(1, words);
+    }
 }
